@@ -40,7 +40,7 @@ router.post("/signup", jwtAuthMiddleWare, async (req, res) => {
 router.put("/:candidateID", jwtAuthMiddleWare, async (req, res) => {
   try {
     if (!(await checkAdminRole(req.user.id))) {
-      return res.status(401).json({ message: "You are not Admin" });
+      return res.status(401).json({ message: "You are not Admin"});
     }
 
     const candidateID = req.params.candidateID;
