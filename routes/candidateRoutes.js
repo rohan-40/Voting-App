@@ -16,7 +16,7 @@ const checkAdminRole = async (userId) => {
 };
 
 
-// For Creating  the Candidate By Admin
+// For Creating  the Candidate by Admin
 router.post("/signup", jwtAuthMiddleWare, async (req, res) => {
   try {
     if (!(await checkAdminRole(req.user.id))) {
