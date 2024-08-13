@@ -8,6 +8,7 @@ app.use(bodyParser.json());
 
 const userRoutes = require('./routes/userRoutes')
 const candidateRoutes = require('./routes/candidateRoutes')
+
 app.use('/user',userRoutes)
 app.use('/candidate',candidateRoutes);
 
