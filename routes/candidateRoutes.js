@@ -55,7 +55,7 @@ router.put("/:candidateID", jwtAuthMiddleWare, async (req, res) => {
     );
 
     if (!response) {
-      return res.status(401).json({ message: "Candidate Not Found" });
+      return res.status(401).json({ message: "Candidate not Found"});
     }
 
     console.log("Candidate Data Updated");
